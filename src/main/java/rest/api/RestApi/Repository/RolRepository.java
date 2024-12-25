@@ -6,13 +6,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import rest.api.RestApi.Models.Rol;
 
-import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface RolRepository extends JpaRepository<Rol, Long> {
 
 
-    List<Rol> findByDescription(String description);
+    Optional<Rol> findByDescription(String description);
 
 
 }
