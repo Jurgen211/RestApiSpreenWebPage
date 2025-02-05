@@ -25,4 +25,8 @@ public class Product {
     private double price;
 
     private String image;
+
+    @ManyToOne
+    private User users;
+    
 }

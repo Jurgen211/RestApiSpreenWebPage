@@ -29,4 +29,10 @@ public class Orden {
 
     private double total;
 
+   @ManyToOne
+   private User users;
+
+   @OneToOne(mappedBy = "orden")
+   private OrdenDetails ordenDetails;
+
 }

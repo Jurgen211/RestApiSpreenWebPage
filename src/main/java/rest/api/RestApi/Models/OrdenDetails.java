@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "users")
+@Table(name = "orden_details")
 @Data
 @Builder
 @AllArgsConstructor
@@ -25,6 +25,12 @@ public class OrdenDetails {
     private double cantidad;
 
     private double total;
+
+    @OneToOne
+    private Orden orden;
+
+    @OneToOne
+    private Product product;
 
 
 }
